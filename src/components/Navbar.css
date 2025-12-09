@@ -1,0 +1,23 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* centers the menu horizontally */
+  padding: 20px 0;
+           /* stays at the top */
+  top: 0;
+  left: 0;
+  background: transparent;   /* optional */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;                 /* space between menu items */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 27px;
+  font-weight: 500;
+}

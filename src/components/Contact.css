@@ -1,0 +1,99 @@
+.Contact {
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
+  background-color: #0a0a0a; /* optional page background */
+}
+
+.section--title {
+  font-size: 64px;
+  color: #CBACF9;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;                 /* spacing between contact items */
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgba(20, 20, 20, 0.42); /* semi-transparent background */
+  border-radius: 50px;
+  cursor: pointer;           /* shows interactive hover effect */
+  transition: transform 0.3s;
+}
+
+.contact-box:hover {
+  transform: translateY(-5px); /* subtle lift on hover */
+}
+
+.border-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.border-rect {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #fbfbfb9b;
+  stroke-width: 2;
+  stroke-dasharray: 20, 15;   /* dash length = 20px, spacing = 15px */
+  rx: 50;
+  ry: 50;
+  transition: stroke 0.3s, stroke-dashoffset 0.6s;
+  stroke-dashoffset: 0;
+}
+
+.contact-box:hover .border-rect {
+  stroke: #ffc4f2;          /* change color on hover */
+  stroke-dashoffset: -60;   /* animate dash movement */
+}
+
+.contact-box > div {
+  display: flex;
+  align-items: center;      /* vertical alignment */
+  gap: 15px;                /* space between icon and text */
+  max-width: 300px;         /* limit width so it can be centered */
+  margin: 0 auto;           /* center the row horizontally in the box */
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 24px;
+  color: white;
+  z-index: 1;               /* above SVG border */
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.contact-box > div:hover {
+  transform: translateY(-2px);  /* slight lift on hover */
+  color: #CBACF9;               /* text color change */
+}
+
+.contact-box > div img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.contact-box > div:hover img {
+  transform: scale(1.2);        /* enlarge icon on hover */
+}
+#pink{
+    color: #ff94c2;
+}
+.attribution{
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
