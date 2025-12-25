@@ -57,8 +57,7 @@ export default function About() {
           </div>
         </div>
       </div>
-        <footer className="attribution">App icon by <a id="pink" href="https://icons8.com/">icons8</a></footer>
-            
+        
     </div>
     
   );
