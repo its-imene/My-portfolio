@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   padding: 20px 0;
+  position: relative;
 }
 
 .nav-links {
@@ -19,6 +20,18 @@
   font-size: 27px;
   font-weight: 500;
 }
+
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  position: absolute;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Tablet */
 @media (max-width: 768px) {
   .nav-links {
     gap: 20px;
@@ -29,14 +42,28 @@
   }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
-  .navbar {
-    padding: 15px 0;
+  .menu-icon {
+    display: block;
   }
 
   .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #000;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    width: 100%;
+    gap: 20px;
+    padding: 20px 0;
+
+    /* hidden by default */
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
   }
 }
